@@ -1,7 +1,5 @@
 # ETL Project. Data Engineering for Sustainable Development in Colombia
 
----
-
 ## 1. Colombian Problem Definition
 
 **Selected SDG:** SDG 4. Quality Education.
@@ -314,6 +312,15 @@ The dashboard provides temporal, comparative, geographic, and demographic views 
 | Urban-Rural Gap | Difference in average overall score between urban and rural school locations. |
 | Gender Gap | Difference in average overall score between male and female students. |
 
+**Visualizations**
+
+Requeriments 1 and 2
+![Dashboard-1](docs/Visualization-1.jpeg)
+
+Requeriments 3, 4 and 5
+![Dashboard-2](docs/Visualization-2.jpeg)
+
+The file .pbix with the dashboard can be found in the same kaggle link that contains the datasets https://www.kaggle.com/datasets/blackgrimoire/budget-to-brilliance this was made due to the dashboard having a size of more than the 100mb allowed by github.
 
 ---
 
@@ -353,13 +360,17 @@ Four findings are documented below, each directly readable from the Power BI das
 
 ### Finding 4. A persistent gender gap is observed in overall Saber 11 performance.
 
-**What the data shows:** The R5 Average Overall Score by Period and Student Gender visualization shows that male students have a higher average overall score than female students in every analyzed assessment period. The difference is relatively stable across the time series rather than appearing as a single-period anomaly. The dashboard also reports a Gender Gap KPI of approximately 7.03 points on average.
+**What the data shows:** The R5 Average Overall Score by Period and Student Gender visualization shows that male students have a higher average overall score than female students across the analyzed assessment periods. The difference remains visible throughout the time series rather than appearing as an isolated result in a single period. This pattern is also summarized by the dashboard's Gender Gap KPI, which reports an average difference of approximately 7.03 points under the selected filters.
 
-**Requirement addressed:** R5.
+The analysis was also extended to the individual Saber 11 subject areas, allowing the gender comparison to be examined beyond the overall score. As shown in the Average Subject Score by Subject and Student Gender visualization, male students obtain higher average scores than female students in several of the evaluated subjects. This indicates that the difference observed in the overall score is also reflected in multiple specific academic areas, although the magnitude of the difference varies by subject.
 
-**Why it matters in the Colombian context:** The persistence of a gender difference in academic performance highlights an educational disparity that should be monitored over time. Examining the gap across multiple Saber 11 periods provides a broader perspective than evaluating a single assessment year and supports the project's SDG 4.5 focus on identifying educational disparities.
+The dashboard also shows the number of students by gender, with approximately 1.53 million male students and 1.75 million female students in the analyzed data. Therefore, the observed difference in average performance is not simply associated with having a larger number of male students in the dataset; in fact, the female group is larger. These counts provide additional context when interpreting the gender comparison.
 
-**Decision / further investigation supported:** The result supports continued monitoring of gender differences in academic outcomes and motivates further analysis to determine whether the gap varies by subject, school type, geographic location, or other contextual factors. The observed association should not be interpreted as evidence that gender itself causes differences in performance.
+**Requirement addressed: R5.**
+
+**Why it matters in the Colombian context:** The persistence of a gender difference in academic performance highlights an educational disparity that should be monitored over time. Examining the gap both at the overall-score level and across individual subjects provides a more detailed view of how this disparity appears in Saber 11 results. This longitudinal perspective supports the project's alignment with SDG 4.5, which focuses on identifying and addressing disparities in education.
+
+**Further investigation supported:** The findings support continued monitoring of gender differences in academic outcomes and provide a basis for deeper analysis of whether the observed differences vary according to subject area, school type, geographic location, academic period, or other contextual characteristics. The fact that the female population is larger than the male population also provides useful context for interpreting the results. However, these findings are descriptive and should not be interpreted as evidence that gender itself causes differences in academic performance.
 
 ---
 
@@ -383,7 +394,7 @@ Four findings are documented below, each directly readable from the Power BI das
 
 ### Reproducing this project from scratch
 
-First you should install the required .txt from this kaggle reporsitory https://www.kaggle.com/datasets/blackgrimoire/data-icfes this ones are the original datasets taken from DataIcfes but they were loaded in a Kaggle repository to make the project easier to reproduce. 
+First you should install the required .txt from this kaggle reporsitory https://www.kaggle.com/datasets/blackgrimoire/budget-to-brilliance this ones are the original datasets taken from DataIcfes but they were loaded in a Kaggle repository to make the project easier to reproduce. 
 
 For the download you will have only to create an account and then you are going to be able to download it and once you download it you extract the files from the .zip in the /data/raw after doing the git clone.
 
