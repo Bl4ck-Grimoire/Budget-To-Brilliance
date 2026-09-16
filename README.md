@@ -201,12 +201,8 @@ a student takes the Saber 11 exam → ICFES publishes the period's results as an
 
 ## 12. ETL Pipeline
 
-Implemented in `src/`, orchestrated by `src/main.py`. Five stages:
+![ETL architecture](docs/ETL-Architecture_diagram.png)
 
-```
-0) ensure the database exists  →  1) create schema  →  2) build + load dimensions
-   →  3) build + load fact  →  4) validate  →  5) report
-```
 ### 1. Extract (`extract.py`)
 
 Reads the nine Saber 11 source files corresponding to periods 2021-2 through 2025-2 from `data/raw/`. Files are processed incrementally using Pandas chunks to avoid loading the complete datasets into memory.
@@ -383,12 +379,6 @@ The dashboard also shows the number of students by gender, with approximately 1.
 - **Power BI:** dashboard and BI layer.
 - **Git & GitHub:** version control and delivery.
 - **Mermaid:** visualization of the diagram.
-
----
-
-## 18. System Architecture
-
-![ETL architecture](docs/ETL-Architecture_diagram.png)
 
 ---
 
