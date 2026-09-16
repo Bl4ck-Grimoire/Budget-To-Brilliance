@@ -1,0 +1,42 @@
+erDiagram
+    DIM_COLEGIO ||--o{ FACT_RESULTADO_SABER11 : describe
+    DIM_GENERO  ||--o{ FACT_RESULTADO_SABER11 : describe
+    DIM_PERIODO ||--o{ FACT_RESULTADO_SABER11 : describe
+
+    DIM_COLEGIO {
+        int id_colegio PK
+        string cole_codigo_icfes
+        string cole_nombre_establecimiento
+        string cole_naturaleza
+        string cole_jornada
+        string cole_area_ubicacion
+        string cole_depto_ubicacion
+        string cole_mcpio_ubicacion
+    }
+
+    DIM_GENERO {
+        int id_genero PK
+        string estu_genero
+        string genero_descripcion
+    }
+
+    DIM_PERIODO {
+        int id_periodo PK
+        string periodo
+        int anio
+        int semestre
+    }
+
+    FACT_RESULTADO_SABER11 {
+        string estu_consecutivo PK
+        int id_periodo PK
+        int id_colegio FK
+        int id_genero FK
+        float punt_lectura_critica
+        float punt_matematicas
+        float punt_sociales_ciudadanas
+        float punt_c_naturales
+        float punt_ingles
+        float punt_global
+        boolean puntaje_sospechoso
+    }

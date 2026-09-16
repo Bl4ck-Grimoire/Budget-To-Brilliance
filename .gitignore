@@ -1,0 +1,15 @@
+# Datos crudos (pesan cientos de MB por periodo -- no se suben al repo,
+# ver la nota "Large dataset" de las instrucciones del proyecto)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Secretos
+.env
+.venv
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
